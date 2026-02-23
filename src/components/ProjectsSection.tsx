@@ -6,24 +6,24 @@ const projects = [
   {
     title: "Study Share Hub",
     description:
-      "A web-based platform that allows students to upload, share, and access study materials efficiently. Helps learners collaborate through a centralized space for academic resources.",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      "A collaborative web platform that enables students to upload, manage, and access educational worksheets through a subject-based dashboard, improving academic resource sharing and accessibility.",
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "Vite", "shadcn-ui"],
     github: "https://github.com/puneet-kumar-garg/study-share-hub-v2",
     live: "https://study-share-hub-v2.vercel.app/",
   },
   {
     title: "MediRouteAI",
     description:
-      "An AI-powered web application designed to assist in optimizing emergency medical routing. Helps determine efficient routes for emergency services to improve response time.",
-    tech: ["React.js", "Node.js", "ML Integration"],
+      "MediRouteAI is a smart ambulance navigation system that uses real-time GPS tracking and traffic signal prioritization to optimize emergency routes, helping reduce response time and improve patient transportation efficiency.",
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "Supabase", "Leaflet"],
     github: "https://github.com/puneet-kumar-garg/mediroute-ai",
     live: "https://medirouteai.vercel.app/",
   },
   {
     title: "Lost Device Tracker",
     description:
-      "A web application that enables users to report and search for lost electronic devices. Provides a simple and user-friendly interface for secure reporting and tracking.",
-    tech: ["HTML", "CSS", "MySQL"],
+      "LostDevice is a web-based platform that allows users to report, search, and connect over lost electronic devices through a secure authentication system and real-time user interaction.",
+    tech: ["React.js", "TypeScript", "Supabase", "Tailwind CSS"],
     github: "https://github.com/puneet-kumar-garg/lostdevice",
     live: "https://lostdevices.netlify.app/",
   },

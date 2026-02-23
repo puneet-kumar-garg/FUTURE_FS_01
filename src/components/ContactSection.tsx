@@ -18,11 +18,30 @@ const ContactSection = () => {
       return;
     }
     setLoading(true);
-    // Simulate submission for now – backend can be wired later
-    await new Promise((r) => setTimeout(r, 1000));
-    setSent(true);
-    setLoading(false);
-    toast({ title: "Message sent!", description: "Thank you for reaching out." });
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "6c8308e9-343d-4b65-8406-2ab60b254387",
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      
+      if (response.ok) {
+        setSent(true);
+        toast({ title: "Message sent!", description: "Thank you for reaching out." });
+      } else {
+        toast({ title: "Failed to send", variant: "destructive" });
+      }
+    } catch (error) {
+      toast({ title: "Error sending message", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
