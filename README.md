@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
 
+🔗 **Live Site**: [https://www.puneetkumargarg.in](https://www.puneetkumargarg.in)
+
 ## Technologies Used
 
 - Vite
