@@ -71,7 +71,8 @@ const AboutSection = () => {
           className="text-center"
         >
           <a
-            href="#"
+            href="/Puneet_Kumar_Garg_Resume.pdf"
+            download="Puneet_Kumar_Garg_Resume.pdf"
             className="inline-flex items-center gap-2 px-6 py-3 border border-primary/40 text-primary rounded-lg hover:bg-primary/10 transition-all duration-300"
           >
             <Download size={18} />
