@@ -30,7 +30,7 @@ const HeroSection = () => {
             className="text-5xl md:text-7xl font-bold leading-tight mb-4"
           >
             Puneet Kumar{" "}
-            <span className="gradient-text">Garg</span>
+            <span className="text-primary glow-text">Garg</span>
           </motion.h1>
 
           <motion.p
@@ -46,17 +46,17 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="flex gap-4 mb-10"
+            className="flex flex-wrap gap-4 mb-10"
           >
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:shadow-[0_0_30px_hsl(var(--glow)/0.4)] transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:glow-border transition-all duration-300 min-w-[140px]"
             >
               Get in Touch
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground rounded-lg hover:border-primary/50 hover:text-primary transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 min-w-[140px]"
             >
               View Projects
             </a>
@@ -87,14 +87,13 @@ const HeroSection = () => {
           className="flex justify-center"
         >
           <div className="relative">
-            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30 box-glow">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-primary glow-border">
               <img
                 src={profileImg}
                 alt="Puneet Kumar Garg"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute inset-0 rounded-full border-2 border-primary/10 animate-float" style={{ margin: "-12px" }} />
           </div>
         </motion.div>
       </div>
