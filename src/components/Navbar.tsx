@@ -26,11 +26,11 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass shadow-lg" : "bg-transparent"
+        scrolled ? "glass shadow-lg" : "glass"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#home" className="font-mono text-lg font-bold text-primary">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+        <a href="#home" className="font-mono text-base md:text-lg font-bold text-primary">
           &lt;Puneet /&gt;
         </a>
 
@@ -49,10 +49,11 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-foreground p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 

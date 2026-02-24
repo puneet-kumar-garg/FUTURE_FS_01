@@ -87,7 +87,7 @@ const HeroSection = () => {
           className="flex justify-center"
         >
           <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-primary glow-border">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary glow-border">
               <img
                 src={profileImg}
                 alt="Puneet Kumar Garg"
