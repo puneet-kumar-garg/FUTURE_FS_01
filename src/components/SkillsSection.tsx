@@ -1,15 +1,31 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const skills = [
-  { name: "HTML", level: 90 },
-  { name: "CSS", level: 85 },
-  { name: "JavaScript", level: 80 },
-  { name: "React.js", level: 75 },
-  { name: "Node.js", level: 70 },
-  { name: "Express.js", level: 70 },
-  { name: "MongoDB", level: 65 },
-  { name: "MySQL", level: 70 },
+const skillCategories = [
+  {
+    title: "Programming Languages",
+    skills: ["C/C++", "Python", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    title: "Databases",
+    skills: ["MySQL"],
+  },
+  {
+    title: "Frameworks & Libraries",
+    skills: ["React.js", "Node.js", "Express.js"],
+  },
+  {
+    title: "Testing Tools",
+    skills: ["Selenium"],
+  },
+  {
+    title: "Tools & Technologies",
+    skills: ["Git & GitHub", "Google Workspace"],
+  },
+  {
+    title: "Relevant Coursework",
+    skills: ["Data Structures & Algorithms", "OOPs"],
+  },
 ];
 
 const SkillsSection = () => {
@@ -17,9 +33,9 @@ const SkillsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="section-padding relative">
+    <section id="skills" className="section-padding relative w-full">
       <div className="absolute top-0 right-0 w-72 h-72 bg-accent/5 rounded-full blur-[100px]" />
-      <div className="max-w-4xl mx-auto" ref={ref}>
+      <div className="container mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -28,32 +44,31 @@ const SkillsSection = () => {
         >
           <p className="font-mono text-sm text-primary mb-2">// skills</p>
           <h2 className="text-4xl font-bold">
-            Tech <span className="gradient-text">Stack</span>
+            Tech <span className="text-accent">Stack</span>
           </h2>
         </motion.div>
 
-        <div className="grid gap-5">
-          {skills.map((skill, i) => (
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {skillCategories.map((category, i) => (
             <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, x: -40 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.1 + i * 0.08, duration: 0.5 }}
+              key={category.title}
+              initial={{ opacity: 0, y: 40 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.1 + i * 0.1, duration: 0.5 }}
+              className="glass rounded-xl p-6 hover:border-primary hover:glow-border transition-all duration-300"
             >
-              <div className="flex justify-between mb-2">
-                <span className="font-mono text-sm font-medium">{skill.name}</span>
-                <span className="font-mono text-xs text-muted-foreground">{skill.level}%</span>
-              </div>
-              <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                  transition={{ delay: 0.3 + i * 0.08, duration: 0.8, ease: "easeOut" }}
-                  className="h-full rounded-full"
-                  style={{
-                    background: `linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)))`,
-                  }}
-                />
+              <h3 className="text-lg font-semibold text-primary mb-4">
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 bg-secondary text-foreground rounded-lg text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </motion.div>
           ))}

@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -121,6 +121,32 @@ const ContactSection = () => {
             </>
           )}
         </motion.form>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="flex justify-center gap-6 mt-8"
+        >
+          <a
+            href="https://github.com/puneet-kumar-garg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-[#181717] border border-[#181717] rounded-xl hover:bg-[#24292e] transition-all duration-300 text-white"
+          >
+            <Github size={24} />
+            <span className="text-base font-semibold">GitHub</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/puneet-kumar-garg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-[#0A66C2] border border-[#0A66C2] rounded-xl hover:bg-[#004182] transition-all duration-300 text-white"
+          >
+            <Linkedin size={24} />
+            <span className="text-base font-semibold">LinkedIn</span>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
