@@ -27,6 +27,14 @@ const projects = [
     github: "https://github.com/puneet-kumar-garg/lostdevice",
     live: "https://lostdevices.netlify.app/",
   },
+  {
+    title: "Nike E-Commerce Testing Automation",
+    description:
+      "Built an end-to-end automation framework using Selenium and TestNG for an e-commerce platform. Implemented cross-browser testing with Selenium Grid and reduced manual testing effort by 40% through structured reporting and reusable test architecture.",
+    tech: ["Java", "Selenium", "TestNG", "Selenium Grid"],
+    github: "https://github.com/puneet-kumar-garg/NikeAutomation",
+    live: "#",
+  },
 ];
 
 const ProjectsSection = () => {
