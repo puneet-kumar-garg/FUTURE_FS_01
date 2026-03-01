@@ -35,6 +35,14 @@ const projects = [
     github: "https://github.com/puneet-kumar-garg/NikeAutomation",
     live: "#",
   },
+  {
+    title: "OrthoVita – AI Physiotherapy Assistant",
+    description:
+      "An AI-powered web app that tracks rehabilitation exercises using real-time pose detection and provides instant posture correction through joint angle analysis.",
+    tech: ["React.js", "Zustand", "TailwindCSS", "MediaPipe Pose", "Node.js", "Express.js", "Gemini API"],
+    github: "https://github.com/Coffee-0verflow/OrthoVita",
+    live: "#",
+  },
 ];
 
 const ProjectsSection = () => {
