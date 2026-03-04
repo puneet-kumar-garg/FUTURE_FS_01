@@ -12,8 +12,8 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-glow-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
 
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
-        <div>
+      <div className="max-w-7xl mx-auto w-full flex justify-center items-center relative z-10">
+        <div className="flex flex-col items-center text-center max-w-3xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="flex flex-wrap gap-4 mb-10"
+            className="flex flex-wrap gap-4 mb-10 justify-center"
           >
             <a
               href="#contact"
@@ -66,7 +66,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            className="flex gap-5"
+            className="flex gap-5 justify-center"
           >
             <a href="https://github.com/puneet-kumar-garg" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Github size={22} />
@@ -79,32 +79,7 @@ const HeroSection = () => {
             </a>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="flex justify-center"
-        >
-          <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary glow-border">
-              <img
-                src={profileImg}
-                alt="Puneet Kumar Garg"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </motion.div>
       </div>
-
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-muted-foreground"
-      >
-        <ArrowDown size={24} />
-      </motion.div>
 
       <motion.div
         animate={{ y: [0, 10, 0] }}
